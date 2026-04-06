@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Leads App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Leads App</h1>
+    <p class="subtitle">Firebase Firestore version</p>
+
+    <form id="leadForm" class="card">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
+      </div>
+
+      <button type="submit">Submit Lead</button>
+      <p id="status"></p>
+    </form>
+
+    <div class="card">
+      <div class="list-header">
+        <h2>Submitted Leads</h2>
+        <button id="refreshBtn" type="button">Refresh</button>
+      </div>
+
+      <div id="leadsList" class="leads-list">
+        <p class="empty">Loading leads...</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
